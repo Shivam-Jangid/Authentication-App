@@ -12,7 +12,7 @@ export default function Signup() {
     }
   });
   const insertData = async ()=>{
-    const res = await fetch("https://backend-psi-gold.vercel.app//signup",{
+    const res = await fetch("https://localhost:3000/signup",{
     method:'post',
     body:JSON.stringify({username,email,password}),
     headers:{
