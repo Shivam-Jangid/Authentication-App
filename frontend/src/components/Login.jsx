@@ -7,7 +7,7 @@ export default function Login() {
     const [password,setpassword] = useState("");
     async function CheackValues(){
         try{
-        const res =await fetch("http://localhost:3000/login",{
+        const res =await fetch("https://backend-psi-gold.vercel.app//login",{
                 method:"post",
                 headers:{
                     "Content-Type":"application/json"
