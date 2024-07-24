@@ -1,3 +1,4 @@
+require ("dotenv").config();
 const express = require('express');
 const jwt = require("jsonwebtoken");
 const jtwpass = "Shivam123";
@@ -7,11 +8,7 @@ const cheackSpell = require("./middlewares/correctValidation");
 const loginmw = require("./middlewares/LoginMiddllewares");
 const cors = require("cors");
 const app = express();
-app.use(cors({
-    origin:["https://backend-psi-gold.vercel.app/"],
-    methods:["POST,GET"],
-    credentials:true
-}));
+const PORT = process.env.PORT 
 app.use(cors());
 app.use(express.json());
 app.post("/signup",cheackSpell,spmiddleware,async (req,res)=>{
@@ -59,6 +56,6 @@ app.post("/AddSkill",(req,res)=>{
     
 });
 
-app.listen (3000, () => {
-  console.log(`Example app on on port ${3000}`)
+app.listen (PORT, () => {
+  console.log(`Example app on on port ${PORT}`)
 })
