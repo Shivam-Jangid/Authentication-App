@@ -7,6 +7,11 @@ const cheackSpell = require("./middlewares/correctValidation");
 const loginmw = require("./middlewares/LoginMiddllewares");
 const cors = require("cors");
 const app = express();
+app.use(cors({
+    origin:["https://backend-psi-gold.vercel.app/"],
+    methods:["POST,GET"],
+    credentials:true
+}));
 app.use(cors());
 app.use(express.json());
 app.post("/signup",cheackSpell,spmiddleware,async (req,res)=>{
