@@ -11,6 +11,9 @@ const app = express();
 const PORT = process.env.PORT 
 app.use(cors());
 app.use(express.json());
+app.get("/",(req,res)=>{
+    res.send("hello world!!");
+})
 app.post("/signup",cheackSpell,spmiddleware,async (req,res)=>{
     const user = new User({
         username:req.body.username,
@@ -29,7 +32,6 @@ app.post("/signup",cheackSpell,spmiddleware,async (req,res)=>{
                 token
             });
         });
-        
     } 
     catch(err){
         res.status(500).json({
