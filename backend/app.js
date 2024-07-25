@@ -8,7 +8,7 @@ const cheackSpell = require("./middlewares/correctValidation");
 const loginmw = require("./middlewares/LoginMiddllewares");
 const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT 
+const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 app.get("/",(req,res)=>{

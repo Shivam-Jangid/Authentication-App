@@ -1,6 +1,8 @@
 {
+  "name": "backend",
+  "main": "app.js",
   "scripts": {
-    "start": "node node.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
