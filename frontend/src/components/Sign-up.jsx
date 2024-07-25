@@ -12,7 +12,7 @@ export default function Signup() {
     }
   });
   const insertData = async ()=>{
-    const res = await fetch("https://localhost:3000/signup",{
+    const res = await fetch("https://authentication-app-3-wd3a.onrender.com/signup",{
     method:'post',
     body:JSON.stringify({username,email,password}),
     headers:{
